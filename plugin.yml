@@ -1,0 +1,18 @@
+author: mstiles92
+description: Blocks players from building Iron/Snow Golems without the correct permissions.
+name: NoGolems
+main: com.mstiles92.nogolems.NoGolemsPlugin
+version: '0.1'
+startup: postworld
+permissions:
+  nogolems.allow.*:
+    description: Allows building of all golems.
+    children:
+      nogolems.allow.snow: true
+      nogolems.allow.iron: true
+  nogolems.allow.snow:
+    default: op
+    description: Allows building of snow golems.
+  nogolems.allow.iron:
+    default: op
+    description: Allows building of iron golems.

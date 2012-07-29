@@ -1,0 +1,8 @@
+NoGolems v0.1 by mstiles92
+
+This simple Bukkit plugin allows you to control who is able to build snow golems and iron golems.
+
+Permissions:
+nogolems.allow.all: Allow building of all golems.
+nogolems.allow.snow: Allow snow golems to be built. 
+nogolems.allow.iron: Allow iron golems to be built.
