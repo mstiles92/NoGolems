@@ -6,3 +6,6 @@ Permissions:
 nogolems.allow.all: Allow building of all golems.
 nogolems.allow.snow: Allow snow golems to be built. 
 nogolems.allow.iron: Allow iron golems to be built.
+
+Originally requested at http://forums.bukkit.org/threads/block-players-from-creating-golems-formatted.88808/
+Hosted on BukkitDev at http://dev.bukkit.org/server-mods/nogolems/
