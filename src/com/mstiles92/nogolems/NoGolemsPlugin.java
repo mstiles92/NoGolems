@@ -1,5 +1,7 @@
 package com.mstiles92.nogolems;
 
+import java.io.IOException;
+
 import org.bukkit.ChatColor;
 import org.bukkit.Material;
 import org.bukkit.block.Block;
@@ -8,10 +10,18 @@ import org.bukkit.event.EventHandler;
 import org.bukkit.event.Listener;
 import org.bukkit.event.block.BlockPlaceEvent;
 import org.bukkit.plugin.java.JavaPlugin;
+import org.mcstats.Metrics;
 
 public class NoGolemsPlugin extends JavaPlugin implements Listener {
 	public void onEnable() {
 		this.getServer().getPluginManager().registerEvents(this, this);
+		
+		try {
+			Metrics metrics = new Metrics(this);
+			metrics.start();
+		} catch (IOException e) {
+			this.getLogger().warning("Metrics failed to start!");
+		}
 	}
 	
 	public void onDisable() {
