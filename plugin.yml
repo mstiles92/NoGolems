@@ -2,7 +2,7 @@ author: mstiles92
 description: Blocks players from building Iron/Snow Golems without the correct permissions.
 name: NoGolems
 main: com.mstiles92.nogolems.NoGolemsPlugin
-version: '1.0'
+version: '1.1'
 startup: postworld
 permissions:
   nogolems.allow.*:
