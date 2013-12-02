@@ -3,10 +3,10 @@
  * NoGolems, an open source Bukkit plugin for blocking players from building
  * snow/iron golems via permission settings.
  *
- * http://dev.bukkit.org/server-mods/nogolems/
+ * http://dev.bukkit.org/server-mods/plugins/
  * http://github.com/mstiles92/NoGolems
  *
- * Copyright © 2013 Matthew Stiles (mstiles92)
+ * Copyright ï¿½ 2013 Matthew Stiles (mstiles92)
  *
  * Licensed under the Common Development and Distribution License Version 1.0
  * You may not use this file except in compliance with this License.
@@ -21,7 +21,7 @@
  * limitations under the license.
  */
 
-package com.mstiles92.nogolems;
+package com.mstiles92.plugins.nogolems;
 
 import java.io.IOException;
 
@@ -66,7 +66,7 @@ public class NoGolemsPlugin extends JavaPlugin implements Listener {
 		// Check for snow golem
 		if (b.getRelative(BlockFace.DOWN).getType() == Material.SNOW_BLOCK
 				&& b.getRelative(BlockFace.DOWN).getRelative(BlockFace.DOWN).getType() == Material.SNOW_BLOCK) {
-			if (!e.getPlayer().hasPermission("nogolems.allow.snow")) {
+			if (!e.getPlayer().hasPermission("plugins.allow.snow")) {
 				e.getPlayer().sendMessage(ChatColor.RED + "You do not have permission to build a Snow Golem.");
 				e.setCancelled(true);
 			}
@@ -80,7 +80,7 @@ public class NoGolemsPlugin extends JavaPlugin implements Listener {
 					&& b.getRelative(BlockFace.DOWN).getRelative(BlockFace.WEST).getType() == Material.IRON_BLOCK)
 				|| (b.getRelative(BlockFace.DOWN).getRelative(BlockFace.NORTH).getType() == Material.IRON_BLOCK
 					&& b.getRelative(BlockFace.DOWN).getRelative(BlockFace.SOUTH).getType() == Material.IRON_BLOCK))) {
-			if (!e.getPlayer().hasPermission("nogolems.allow.iron")) {
+			if (!e.getPlayer().hasPermission("plugins.allow.iron")) {
 				e.getPlayer().sendMessage(ChatColor.RED + "You do not have permission to build an Iron Golem.");
 				e.setCancelled(true);
 			}
